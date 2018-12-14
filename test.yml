@@ -1,0 +1,28 @@
+---
+
+ - name: test 
+   hosts: '{{ hosts }}'
+   become: yes
+   become_user: root
+   become_method: dzdo
+
+   vars:
+     - siteroot: /tmp
+   tasks:
+
+     - name: test
+       shell: 
+         cmd: touch test
+         chdir: "{{ siteroot }}"
+
+
+
+
+
+
+
+
+
+   
+
+     
